@@ -11,7 +11,7 @@
 @tailwind base;
 @layer base {
   html {
-    font-family: TODO, system-ui, sans-serif;
+    font-family: system-ui, sans-serif;
     height: 100%;
   }
 
@@ -23,5 +23,3 @@
 
 @tailwind components;
 @tailwind utilities;
-
-

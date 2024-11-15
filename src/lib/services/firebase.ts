@@ -11,7 +11,6 @@ import firebaseConfig from "./firebaseConfig";
 
 export const app = initializeApp(firebaseConfig);
 
-// TODO delete if auth is not used
 export const auth = initializeAuth(app, {
   persistence: [indexedDBLocalPersistence, browserLocalPersistence, browserSessionPersistence],
 });

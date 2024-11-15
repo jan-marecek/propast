@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>TODO</title>
+  <title>propAST</title>
 </svelte:head>
 
 <AppBar />
