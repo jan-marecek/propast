@@ -34,7 +34,7 @@ module.exports = {
         styled: true,
         themes:
             [{
-                TODONameTheme: {
+                propastNameTheme: {
                     "primary": "#547697",
                     "primary-content": "#FFFFFF",
                     // "primary-focus": "#E00A47",
