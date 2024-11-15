@@ -21,7 +21,7 @@
 
   .h1 {
     @apply font-bold;
-    @apply text-3xl;
+    @apply text-6xl;
     @apply lg:text-4xl;
     @apply text-white;
     @apply leading-tight;

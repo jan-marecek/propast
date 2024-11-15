@@ -12,7 +12,7 @@
 </script>
 
 <a
-  class="navbarunderline font uppercase text-secondary duration-300 ease-in-out hover:text-secondary"
+  class="navbarunderline font uppercase text-primary duration-300 ease-in-out hover:text-primary"
   aria-label={alt}
   {href}
   on:click={handleClick}
