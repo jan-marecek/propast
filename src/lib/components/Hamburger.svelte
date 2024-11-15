@@ -12,7 +12,7 @@
     width: 31px;
     height: 24px;
     cursor: pointer;
-    --bar-color-inner: var(--bar-color, rgba(255, 255, 255, 1));
+    --bar-color-inner: var(--bar-color, rgba(229, 229, 229, 1));
     --bar-color-inner-hidden: var(--bar-color-hidden, rgba(255, 255, 255, 0));
   }
 

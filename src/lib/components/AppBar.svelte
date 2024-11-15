@@ -3,7 +3,7 @@
   import { slide } from "svelte/transition";
   import NavigationButton from "./buttons/NavigationButton.svelte";
 
-  let open = false;
+  let open = true;
   function handleClick() {
     open = false;
   }
@@ -35,7 +35,7 @@
       </div>
       {#if open}
         <div
-          class="absolute left-0 right-0 top-[80px] z-10 flex-col items-center gap-4 bg-white pb-10 menu:hidden
+          class="absolute left-0 right-0 top-[80px] z-10 flex-col items-center gap-4 bg-primary pb-10 menu:hidden
           {open ? 'flex' : 'hidden'}"
           transition:slide
         >
