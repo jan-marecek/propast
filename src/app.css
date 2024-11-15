@@ -21,5 +21,22 @@
   }
 }
 
+@layer components {
+
+  .h1 {
+    @apply font-bold;
+    @apply text-3xl;
+    @apply lg:text-4xl;
+    @apply text-white;
+    @apply leading-tight;
+  }
+
+  .h2 {
+    @apply font-bold;
+    @apply text-2xl;
+    @apply leading-tight;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
