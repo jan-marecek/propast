@@ -2,7 +2,7 @@
   class="footer grid-cols-2 grid-rows-2 items-center justify-between gap-1 bg-neutral p-4 text-neutral-content md:grid-rows-1 md:gap-2"
 >
   <div class="order-2 grid-flow-col items-center md:order-none md:pl-8">
-    <p class="text-base-100">© 2022 TODO</p>
+    <p class="text-base-100">© 2024 Propast</p>
   </div>
   <div class="order-1 col-span-2 grid-flow-col items-center md:order-none">
     <p class="text-gray-400">GDPR | Cookies | povinné údaje</p>
