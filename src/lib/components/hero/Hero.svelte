@@ -1,6 +1,6 @@
 <script>
   import Image from "$lib/components/images/ImageFromVitePicture.svelte";
-  import Hero from "/homepage/hero.jpg";
+  import Hero from "/src/assets/homepage/hero.jpg";
 </script>
 
 <section class="relative">
