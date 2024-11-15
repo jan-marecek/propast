@@ -10,7 +10,7 @@
 </script>
 
 <header class="fixed left-0 right-0 z-30">
-  <div class="relative h-appbar bg-secondary text-primary">
+  <div class="relative h-appbar bg-primary text-primary">
     <div class="mx-auto flex h-full max-w-content justify-between pl-mobile menu:px-mobile">
       <div class="inline-flex items-center justify-start gap-2 py-2">
         <a class="menuButton flex-none" href="/">
