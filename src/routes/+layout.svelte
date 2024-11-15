@@ -1,6 +1,4 @@
 <script lang="ts">
-  // TODO this or in app.css import fonts
-  // import '@fontsource/poppins/400.css';
   import "../app.css";
   import { initi18n } from "$lib/services/i18n";
   import AppBar from "$lib/components/AppBar.svelte";

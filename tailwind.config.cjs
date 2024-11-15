@@ -19,7 +19,7 @@ module.exports = {
       },
       spacing: {
         mobile: "1rem",
-        appbar: "60px",
+        appbar: "80px",
       },
       keyframes: {
         loading: {

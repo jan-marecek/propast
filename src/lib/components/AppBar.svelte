@@ -1,64 +1,65 @@
 <script lang="ts">
-  import { navigating } from "$app/stores";
-  import SearchInput from "$lib/components/form/SearchInput.svelte";
-  import { user } from "$lib/stores/user";
-  import { signOut } from "$lib/services/firebaseAuth";
-  import { Route } from "$lib/constants";
   import Hamburger from "$lib/components/Hamburger.svelte";
-  import SideMenu from "$lib/components/layouts/SideMenu.svelte";
-
-  $: if ($navigating) {
-    open = false;
-  }
+  import { slide } from "svelte/transition";
+  import NavigationButton from "./buttons/NavigationButton.svelte";
 
   let open = false;
+  function handleClick() {
+    open = false;
+  }
 </script>
 
 <header class="fixed left-0 right-0 z-30">
-  <div class="relative h-appbar bg-primary text-white">
-    <div class="max-w-menu mx-auto flex w-full items-center px-mobile py-0">
-      <div
-        class="inline-flex flex-1 items-center justify-start gap-2 py-2 md:w-1/2 md:flex-initial"
-      >
-        <a class="menuButton" href="/">
-          <img alt="" class="h-6 w-6" src="" />
+  <div class="relative h-appbar bg-primary text-secondary">
+    <div class="mx-auto flex h-full max-w-content justify-between pl-mobile menu:px-mobile">
+      <div class="inline-flex items-center justify-start gap-2 py-2">
+        <a class="menuButton flex-none" href="/">
+          <img alt="logo Propast" class="h-[36px] w-[204px] sm:h-[45px] sm:w-[255px]" src="" />
         </a>
-        <!--        <SearchInput />-->
       </div>
-      <div class="hidden shrink-0 items-center menu:inline-flex">
-        <span>MENU</span>
+      <div class="hidden items-center gap-12 text-base font-bold menu:inline-flex">
+        <NavigationButton label="1. ročník" alt="první ročník" href="/prvnirocnik" />
+        <NavigationButton label="2. ročník" alt="druhý ročník" href="/druhyrocnik" />
+        <!-- <NavigationButton label="3. ročník" alt="třetí ročníík" href="/" /> -->
+        <NavigationButton label="Disk" alt="disk" href="/disk" />
+        <NavigationButton label="Kontakt" alt="Kontakt" href="" />
       </div>
-      <div class="inline-flex w-1/2 items-center justify-end gap-2 md:gap-4">
-        {#if $user}
-          <button
-            class="btn btn-square btn-ghost no-animation hidden h-appbar w-appbar rounded-none menu:flex"
-            on:click={() => signOut()}
-          >
-            Odhlásit se
-          </button>
-        {:else}
-          <a href={Route.LOGIN} class="btn btn-primary rounded-full bg-white/20 text-white">
-            Sign In/Sign UP
-          </a>
-        {/if}
+      <div class="flex w-full flex-row justify-end menu:hidden">
         <button
-          class="btn btn-square btn-ghost no-animation hidden h-appbar w-appbar rounded-none menu:flex"
+          class="btn btn-square btn-ghost no-animation h-appbar w-appbar rounded-none"
+          aria-label="Otevřít menu"
           on:click={() => (open = !open)}
         >
           <Hamburger {open} />
         </button>
       </div>
+      {#if open}
+        <div
+          class="absolute left-0 right-0 top-[80px] z-10 flex-col items-center gap-4 bg-white pb-10 menu:hidden
+          {open ? 'flex' : 'hidden'}"
+          transition:slide
+        >
+          <div
+            class="h-content mt-8 flex w-full flex-col items-center justify-center gap-8 bg-primary text-base font-bold menu:hidden"
+          >
+            <NavigationButton
+              label="1. ročník"
+              alt="první ročník"
+              href="/"
+              on:click={handleClick}
+            />
+            <NavigationButton
+              label="2. ročník"
+              alt="druhý ročník"
+              href="/"
+              on:click={handleClick}
+            />
+            <!-- <NavigationButton label="3. ročník" alt="třetí ročníík" href="/" on:click={handleClick} /> -->
+            <NavigationButton label="Disk" alt="disk" href="/" on:click={handleClick} />
+            <NavigationButton label="Kontakt" alt="kontakt" href="/" on:click={handleClick} />
+          </div>
+        </div>
+      {/if}
     </div>
   </div>
 </header>
-
-<SideMenu bind:open />
-
-<!--Menu open page overlay-->
-<div
-  class="fixed left-0 top-0 z-10 h-full w-full bg-black opacity-0 transition-opacity duration-300"
-  class:h-full={open}
-  class:opacity-30={open}
-  class:w-full={open}
-  on:click={() => (open = false)}
-></div>
