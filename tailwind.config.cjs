@@ -58,7 +58,7 @@ module.exports = {
           "success-content": "#FFFFFF",
           warning: "#f9a41b",
           // "warning-content": "#FFFFFF",
-          error: "#ef2931",
+          error: "#F9C74F",
           // "error-content": "#FFFFFF",
 
           "--rounded-box": "3px", // border radius rounded-box utility class, used in card and other large boxes
