@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 
 @tailwind base;
 @layer base {
   html {
-    font-family: 'Lato', system-ui, sans-serif;
+    font-family: "Lato", system-ui, sans-serif;
     height: 100%;
   }
 
@@ -14,15 +14,15 @@
 }
 
 @layer components {
-
-  .h1, .h2 {
-    font-family: 'Montserrat', sans-serif;
+  .h1,
+  .h2 {
+    font-family: "Montserrat", sans-serif;
   }
 
   .h1 {
     @apply font-bold;
-    @apply text-6xl;
-    @apply lg:text-4xl;
+    @apply text-3xl;
+    @apply lg:text-6xl;
     @apply text-white;
     @apply leading-tight;
   }
