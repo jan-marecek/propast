@@ -36,16 +36,16 @@ module.exports = {
     themes: [
       {
         propastNameTheme: {
-          primary: "#89CFF0",
+          primary: "#1A1A40",
           "primary-content": "#F2F2F2",
           // "primary-focus": "#E00A47",
-          secondary: "#FFB385",
+          secondary: "#FF6F3C",
           // "secondary-focus": "#5243AA",
           // "secondary-content": "#FFFFFF",
           accent: "#E5E5E5",
           // "accent-focus": "#FF5630",
           // "accent-content": "#FFFFFF",
-          neutral: "#F2F2F2",
+          neutral: "#FFF7E0",
           // "neutral-focus": "#1c1c1c",
           // "neutral-content": "#FFFFFF",
           "base-content": "#222222",
