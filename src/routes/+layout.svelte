@@ -14,7 +14,7 @@
 </svelte:head>
 
 <AppBar />
-<main class="flex-1 bg-white menu:pt-appbar">
+<main class="flex-1 bg-base-300 menu:pt-appbar">
   <slot />
 </main>
 <Footer />
