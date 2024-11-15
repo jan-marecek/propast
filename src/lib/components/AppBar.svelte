@@ -3,7 +3,7 @@
   import { slide } from "svelte/transition";
   import NavigationButton from "./buttons/NavigationButton.svelte";
 
-  let open = false;
+  let open = true;
   function handleClick() {
     open = false;
   }
@@ -14,7 +14,7 @@
     <div class="mx-auto flex h-full max-w-content justify-between pl-mobile menu:px-mobile">
       <div class="inline-flex items-center justify-start gap-2 py-2">
         <a class="menuButton flex-none" href="/">
-          <img alt="logo Propast" class="h-[36px] w-[204px] sm:h-[45px] sm:w-[255px]" src="" />
+          <img alt="logo Propast" class="h-[60px] w-[60px]" src="/logo/logoOrange.png" />
         </a>
       </div>
       <div class="hidden items-center gap-12 text-base font-bold menu:inline-flex">
@@ -35,7 +35,7 @@
       </div>
       {#if open}
         <div
-          class="absolute left-0 right-0 top-[80px] z-10 flex-col items-center gap-4 bg-white pb-10 menu:hidden
+          class="absolute left-0 right-0 top-[80px] z-10 flex-col items-center gap-4 bg-primary pb-10 menu:hidden
           {open ? 'flex' : 'hidden'}"
           transition:slide
         >

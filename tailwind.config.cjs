@@ -37,29 +37,30 @@ module.exports = {
       {
         propastNameTheme: {
           primary: "#1A1A40",
+          // Dark Navy
           "primary-content": "#F2F2F2",
-          // "primary-focus": "#E00A47",
           secondary: "#FF6F3C",
-          // "secondary-focus": "#5243AA",
-          // "secondary-content": "#FFFFFF",
-          accent: "#E5E5E5",
-          // "accent-focus": "#FF5630",
-          // "accent-content": "#FFFFFF",
-          neutral: "#FFF7E0",
-          // "neutral-focus": "#1c1c1c",
-          // "neutral-content": "#FFFFFF",
-          "base-content": "#222222",
-          "base-100": "#FFFFFF",
+          // Bright Orange
+          accent: "#F9C74F",
+          // Sun Yellow
+          neutral: "#333333",
+          // Charcoal
+          "base-content": "#6C6C6C",
+          // Slate Gray
+          "base-100": "#E5E5E5",
+          // Cool Gray
           "base-200": "#D6D6D6",
-          "base-300": "#A1A1A1",
+          // Gray
+          "base-300": "#FFF7E0",
+          // Soft Beige
           info: "#1b9ef9",
           // "info-content": "#FFFFFF",
-          success: "#40b751",
-          "success-content": "#FFFFFF",
+          success: "#4CAF50",
+          // Emerald Green
           warning: "#f9a41b",
           // "warning-content": "#FFFFFF",
-          error: "#F9C74F",
-          // "error-content": "#FFFFFF",
+          error: "#D72638",
+          // Crimson Red
 
           "--rounded-box": "3px", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "9999px", // border radius rounded-btn utility class, used in buttons and similar element
