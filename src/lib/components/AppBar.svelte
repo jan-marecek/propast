@@ -14,7 +14,7 @@
     <div class="mx-auto flex h-full max-w-content justify-between pl-mobile menu:px-mobile">
       <div class="inline-flex items-center justify-start gap-2 py-2">
         <a class="menuButton flex-none" href="/">
-          <img alt="logo Propast" class="h-[36px] w-[204px] sm:h-[45px] sm:w-[255px]" src="" />
+          <img alt="logo Propast" class="h-[60px] w-[60px]" src="/logo/logoOrange.png" />
         </a>
       </div>
       <div class="hidden items-center gap-12 text-base font-bold menu:inline-flex">
