@@ -53,10 +53,11 @@ module.exports = {
           // Gray
           "base-300": "#FFF7E0",
           // Soft Beige
-          info: "#1b9ef9",
-          // "info-content": "#FFFFFF",
-          success: "#4CAF50",
+          info: "#4CAF50",
           // Emerald Green
+          // "info-content": "#FFFFFF",
+          success: "#1b9ef9",
+          // Dodger Blue
           warning: "#f9a41b",
           // "warning-content": "#FFFFFF",
           error: "#D72638",
