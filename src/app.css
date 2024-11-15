@@ -1,16 +1,5 @@
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
-}
 @tailwind base;
 @layer base {
   html {
@@ -32,7 +21,7 @@
 
   .h1 {
     @apply font-bold;
-    @apply text-6xl;
+    @apply text-3xl;
     @apply lg:text-4xl;
     @apply text-white;
     @apply leading-tight;
