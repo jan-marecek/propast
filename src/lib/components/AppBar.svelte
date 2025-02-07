@@ -3,7 +3,7 @@
   import { slide } from "svelte/transition";
   import NavigationButton from "./buttons/NavigationButton.svelte";
 
-  let open = true;
+  let open = false;
   function handleClick() {
     open = false;
   }

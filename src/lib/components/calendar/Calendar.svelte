@@ -172,12 +172,10 @@
           <tr></tr>
         {/if}
         <td
-          class={`relative h-[96px] w-[182px] border-2 border-gray-300 ${
-            isEvent(day) ? "bg-primary text-white" : "bg-[#F2F2F2]"
+          class={`relative h-[96px] w-[182px] border-2 border-base-200 ${
+            isEvent(day) ? "bg-primary text-[#FFF7E0]" : "bg-[#FFF7E0]"
           } pl-1 pt-2 text-left align-top font-medium sm:pl-3 ${
-            day.getMonth() === currentDate.getMonth()
-              ? "text-secondary"
-              : "text-[#283618] opacity-50"
+            day.getMonth() === currentDate.getMonth() ? "text-secondary" : "text-#FF6F3C opacity-50"
           }`}
         >
           <div class="text-xs font-medium sm:text-lg">
