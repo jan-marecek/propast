@@ -27,6 +27,13 @@
     "2025-05-08": "Den vítězství - výuka zrušena",
     "2025-09-01": "Začátek mimořádného zkouškového období",
     "2025-09-12": "Konec mimořádného zkouškového období",
+    "2025-02-14": "Konec zápisu předmětů.",
+    "2025-02-17": "Začátek změn předmětů po zahájení semestru",
+    "2025-02-28": "Konec změn předmětů po zahájení semestru",
+    "2025-02-17": "Začátek změn rozvrhových hodin po zahájení semestru",
+    "2025-02-28": "Konec změn rozvrhových hodin po zahájení semestru.",
+    "2025-02-17": "Dodatečný zápis do semestru",
+    "2025-02-19": "Konec dodatečného zápisu do semestru",
   };
 
   // Displayed month, year, days
