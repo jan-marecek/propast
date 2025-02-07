@@ -4,9 +4,6 @@
 
   // Initialize state variables
   let currentDate = new Date();
-  let isOpen = false;
-  let selectedOption = "Events";
-  let isLoading = false;
   let events = {
     "2025-02-03": "Zápis Tělocviku",
     "2025-02-05": "Zápis Předmětů",
@@ -78,7 +75,7 @@
 
     let prevMonthOverflow = [];
     for (let i = startDayOfWeek; i > 0; i--) {
-      prevMonthOverflow.unshift(new Date(year, month, -i + 1));
+      prevMonthOverflow.push(new Date(year, month, -i + 1));
     }
 
     let days = [];
