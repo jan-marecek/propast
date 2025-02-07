@@ -14,10 +14,10 @@ import {
   updateDoc,
   deleteDoc,
 } from "firebase/firestore";
-import type { Reservation } from "$lib/types";
+import type { Event } from "$lib/types";
 import { createBatchedCollection } from "$lib/stores/batchedCollection";
 
-function fromSnapshotToReservation(snapshot: QueryDocumentSnapshot): Reservation {
+function fromSnapshotToEvent(snapshot: QueryDocumentSnapshot): Event {
   const data = snapshot.data();
 
   if (data.publishedAt?.toDate) {
@@ -32,66 +32,66 @@ function fromSnapshotToReservation(snapshot: QueryDocumentSnapshot): Reservation
     data.updatedAt = data.updatedAt.toDate();
   }
 
-  return data as Reservation;
+  return data as Event;
 }
 
-export async function getAllReservations(): Promise<Reservation[]> {
+export async function getAllEvents(): Promise<Event[]> {
   const db = firestore;
-  const q = query(collection(db, "reservations"), orderBy("createdAt", "desc"));
+  const q = query(collection(db, "events"), orderBy("createdAt", "desc"));
   const querySnapshot = await getDocs(q);
-  return querySnapshot.docs.map(fromSnapshotToReservation);
+  return querySnapshot.docs.map(fromSnapshotToEvent);
 }
 
-export async function getReservations(id: string): Promise<Reservation | null> {
+export async function getEvent(id: string): Promise<Event | null> {
   const db = firestore;
-  const docRef = doc(db, "reservations", id);
+  const docRef = doc(db, "events", id);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
-    return fromSnapshotToReservation(docSnap);
+    return fromSnapshotToEvent(docSnap);
   } else {
     return null;
   }
 }
 
-export async function updateReservation(data: Reservation) {
+export async function updateEvent(data: Event) {
   if (!data.id) {
-    throw new Error("updateReservation: No ID provided");
+    throw new Error("updateEvent: No ID provided");
   }
   const db = firestore;
-  const docRef = doc(db, "reservations", data.id);
+  const docRef = doc(db, "events", data.id);
 
   try {
     await updateDoc(docRef, {
       ...data,
       updatedAt: serverTimestamp(),
     });
-    console.log("Reservation successfully updated!");
+    console.log("Event successfully updated!");
   } catch (error) {
-    console.error("Error updating reservation:", error);
+    console.error("Error updating event:", error);
   }
 }
 
-export async function deleteReservation(id: string) {
+export async function deleteEvent(id: string) {
   if (!id) {
-    console.error("deleteReservation: No ID provided");
+    console.error("deleteEvent: No ID provided");
     return;
   }
   const db = firestore;
-  const docRef = doc(db, "reservations", id);
+  const docRef = doc(db, "events", id);
   await deleteDoc(docRef);
 }
 
-export async function createReservation(data: Reservation): Promise<Reservation> {
+export async function createEvent(data: Event): Promise<Event> {
   const db = firestore;
-  const reservationsRef = collection(db, "reservations");
+  const eventsRef = collection(db, "events");
   if (!data.id || data.id == "") {
-    data.id = doc(reservationsRef).id;
+    data.id = doc(eventsRef).id;
   }
   if (!data.isVisible) {
     data.isVisible = false;
   }
 
-  const docSnap = await setDoc(doc(reservationsRef, data.id), {
+  const docSnap = await setDoc(doc(eventsRef, data.id), {
     id: data.id,
     note: data.note,
     name: data.name ?? "",
@@ -108,7 +108,7 @@ export async function createReservation(data: Reservation): Promise<Reservation>
   return data;
 }
 
-export function createReservationsStore({
+export function createEventsStore({
   limitSize = 9,
   publishedTill = new Date(),
 }: {
@@ -121,10 +121,10 @@ export function createReservationsStore({
     limit(limitSize),
   ];
 
-  return createBatchedCollection<Reservation>({
-    path: "reservations",
+  return createBatchedCollection<Event>({
+    path: "events",
     batchSize: limitSize,
     constraints: queryConstraints,
-    fromSnapshotToData: fromSnapshotToReservation,
+    fromSnapshotToData: fromSnapshotToEvent,
   });
 }

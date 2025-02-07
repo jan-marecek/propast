@@ -3,13 +3,10 @@
 </script>
 
 <section id="rezervace" class="relative w-full overflow-hidden bg-primary px-mobile pb-14 lg:pb-32">
-  <img
-    src="/background/rezervace-bg.png"
-    class="absolute left-0 top-0 h-full w-full object-cover"
-    alt="Background"
-  />
   <div class="relative">
-    <h2 class="h2-white px-mobile py-14 text-center lg:pb-20 lg:pt-32">Kalendář obsazenosti</h2>
+    <h2 class="h2 px-mobile py-14 text-center text-base-300 lg:pb-20 lg:pt-32">
+      Kalendář obsazenosti
+    </h2>
     <div class="mx-auto max-w-content overflow-x-auto rounded-3xl bg-white px-3 md:px-12">
       <div class="">
         <!-- Adjust the min-width as needed -->
