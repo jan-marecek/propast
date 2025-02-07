@@ -103,11 +103,22 @@
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
+
+  // Week is odd or even
+  function getWeekNumber(date) {
+    const startDate = new Date(date.getFullYear(), 0, 1);
+    const days = Math.floor((date - startDate) / (24 * 60 * 60 * 1000));
+    return Math.ceil((days + startDate.getDay() + 1) / 7);
+  }
+
+  function isOddWeek(date) {
+    return getWeekNumber(date) % 2 !== 0;
+  }
 </script>
 
 <div class="py-7">
   <div class="mb-10 flex w-full items-center justify-between">
-    <div class="hidden w-48 md:block"></div>
+    <div class="hidden md:block"></div>
     <div class=" flex w-full items-center justify-start md:justify-center">
       <button class="focus:outline-none" on:click={goPrevious}>
         <img src="/icons/angle-left.svg" alt="Previous Month" />
@@ -151,6 +162,11 @@
           {#if isEvent(day)}
             <div class="absolute bottom-5 left-1 overflow-hidden text-[6px] sm:left-3 sm:text-xs">
               {isEvent(day)}
+            </div>
+          {/if}
+          {#if index % 7 === 0}
+            <div class="absolute right-1 top-1 text-[6px] sm:text-xs">
+              {isOddWeek(day) ? "Lichý" : "Sudý"}
             </div>
           {/if}
         </td>
