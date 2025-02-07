@@ -19,10 +19,11 @@
       </div>
       <div class="hidden items-center gap-12 text-base font-bold menu:inline-flex">
         <NavigationButton label="1. ročník" alt="první ročník" href="/prvnirocnik" />
-        <NavigationButton label="2. ročník" alt="druhý ročník" href="/druhyrocnik" />
+        <!-- <NavigationButton label="2. ročník" alt="druhý ročník" href="/druhyrocnik" /> -->
         <!-- <NavigationButton label="3. ročník" alt="třetí ročníík" href="/" /> -->
+        <NavigationButton label="Kalendář" alt="kalendar" href="/#calendar" />
         <NavigationButton label="Disk" alt="disk" href="/disk" />
-        <NavigationButton label="Kontakt" alt="Kontakt" href="" />
+        <NavigationButton label="Kontakt" alt="kontakt" href="" />
       </div>
       <div class="flex w-full flex-row justify-end menu:hidden">
         <button
@@ -48,14 +49,20 @@
               href="/"
               on:click={handleClick}
             />
-            <NavigationButton
+            <!-- <NavigationButton
               label="2. ročník"
               alt="druhý ročník"
               href="/"
               on:click={handleClick}
-            />
+            /> -->
             <!-- <NavigationButton label="3. ročník" alt="třetí ročníík" href="/" on:click={handleClick} /> -->
-            <NavigationButton label="Disk" alt="disk" href="/" on:click={handleClick} />
+            <NavigationButton
+              label="Kalendář"
+              alt="kalendar"
+              href="/#calendar"
+              on:click={handleClick}
+            />
+            <NavigationButton label="Disk" alt="disk" href="/disk" on:click={handleClick} />
             <NavigationButton label="Kontakt" alt="kontakt" href="/" on:click={handleClick} />
           </div>
         </div>
