@@ -6,7 +6,6 @@ This template uses:
   - language
 - [tailwind](https://tailwindcss.com/docs/installation)
     - styling framework
-    - we will probably migrate to [WindiCSS](https://windicss.org/)/[UnoCSS](https://github.com/unocss/unocss) later on
 - [daisyUI](https://daisyui.com/)
     - UI framework for tailwind
 - [Unplugin Icons](https://github.com/antfu/unplugin-icons)
@@ -19,7 +18,7 @@ This template uses:
     - database/other backend functions
 
 # Package manager
-we are using Yarn modern as classic had some problems on first install with `sharp` package.
+Using Yarn modern as classic had some problems on first install with `sharp` package.
 That means you need to enable corepack:
 `corepack enable`
 
